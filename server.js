@@ -7,7 +7,7 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,6 +29,13 @@ var characters = [
     role: "Sith Lord",
     age: 200,
     forcePoints: 1200
+  },
+  {
+    routeName: "luke",
+    name: "Luke Skywalker",
+    role: "Jedi Knoght",
+    age: 30,
+    forcePoints: 1300
   },
   {
     routeName: "obiwankenobi",
